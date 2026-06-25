@@ -9,25 +9,4 @@ The specific contributions of this work are as follows.
 5.	A simulation study (§5) evaluating MA-DTSR against epidemic routing [3], uninformed random walk, and a heuristic-only semantic baseline across network sizes N ∈ [100, 300], TTL budgets TTL ∈ {10, 20, 30, 40}, and varying resource densities, measuring success rate, hop count, message volume, semantic match error, and mission utility.
 
 
-Upload to Colab and run with these five cells:
-
-Cell 1:
-pythonimport sys
-sys.path.insert(0, '/content')
-
-Cell 2:
-pythonimport MA_DTSR_Step1_Mobility as step1
-net = step1.main()
-
-Cell 3:
-pythonimport MA_DTSR_Step2_Descriptors as step2
-meta = step2.main_step2(net)
-
-Cell 4:
-pythonimport MA_DTSR_Step3_Baselines as step3
-df3, summary3, routers = step3.main_step3(net, step2)
-
-Cell 5:
-pythonimport MA_DTSR_Step4_RL as step4
-df4, summary4, rl_router = step4.main_step4(net, step2, step3)
 
