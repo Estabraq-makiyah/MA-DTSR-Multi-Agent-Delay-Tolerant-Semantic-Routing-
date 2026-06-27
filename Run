@@ -4,6 +4,11 @@ Upload to Colab and run with these five cells:
 import sys
 sys.path.insert(0, '/content')
 
+import WiSARD_Analysis as wisard
+stats, params = wisard.main_wisard_analysis(
+    wisard_root='/content/MA-DTN/WiSARD_txts_only/WiSARD_txts_only'
+)
+
 # Cell 2
 import MA_DTSR_Step1_Mobility as step1
 net = step1.main()
