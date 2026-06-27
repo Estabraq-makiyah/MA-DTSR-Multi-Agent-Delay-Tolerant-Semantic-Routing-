@@ -9,4 +9,4 @@ The specific contributions of this work are as follows.
 5.	A simulation study (§5) evaluating MA-DTSR against epidemic routing [3], uninformed random walk, and a heuristic-only semantic baseline across network sizes N ∈ [100, 300], TTL budgets TTL ∈ {10, 20, 30, 40}, and varying resource densities, measuring success rate, hop count, message volume, semantic match error, and mission utility.
 
 
-
+Note: To run the codes, refer to Run.txt
