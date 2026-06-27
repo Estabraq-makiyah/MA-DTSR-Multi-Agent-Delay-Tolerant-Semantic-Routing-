@@ -1,21 +1,25 @@
 Upload to Colab and run with these five cells:
 
-Cell 1:
-pythonimport sys
+# Cell 1
+import sys
 sys.path.insert(0, '/content')
 
-Cell 2:
-pythonimport MA_DTSR_Step1_Mobility as step1
+# Cell 2
+import MA_DTSR_Step1_Mobility as step1
 net = step1.main()
 
-Cell 3:
-pythonimport MA_DTSR_Step2_Descriptors as step2
+# Cell 3
+import MA_DTSR_Step2_Descriptors as step2
 meta = step2.main_step2(net)
 
-Cell 4:
-pythonimport MA_DTSR_Step3_Baselines as step3
+# Cell 4
+import MA_DTSR_Step3_Baselines as step3
 df3, summary3, routers = step3.main_step3(net, step2)
 
-Cell 5:
-pythonimport MA_DTSR_Step4_RL as step4
+# Cell 5
+import MA_DTSR_Step4_RL as step4
 df4, summary4, rl_router = step4.main_step4(net, step2, step3)
+
+# Cell 6
+import MA_DTSR_Step5_Sweep as step5
+df5, ablations = step5.main_step5(step1, step2, step3, step4)
